@@ -1,0 +1,74 @@
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
+
+local Window = Fluent:CreateWindow({
+    Title = "Loader",
+    TabWidth = 160,
+    Size = UDim2.fromOffset(680, 390),
+    Acrylic = true,
+    Theme = "Aqua",
+    MinimizeKey = Enum.KeyCode.LeftControl
+})
+
+
+local Tabs = {
+    Scripts = Window:AddTab({ Title = "Scripts", Icon = "code" }),
+}
+
+Tabs.Scripts:AddButton({
+    Title = "Universal",
+    Description = "",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ChadreysOfficialScript/AimbotESP/refs/heads/main/lua"))()
+    end
+})
+
+Tabs.Scripts:AddButton({
+    Title = "Apocalypse Rising 2",
+    Description = "",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ChadreysOfficialScript/Ch4dr3y.xyz/refs/heads/main/main.lua"))()
+    end
+})
+
+Tabs.Scripts:AddButton({
+    Title = "Forsaken",
+    Description = "",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/aiminawp/acidHub/refs/heads/main/forsaken.lua"))()
+    end
+})
+
+
+Tabs.Scripts:AddButton({
+    Title = "Dahood",
+    Description = "",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/aiminawp/acidHub/refs/heads/main/dahood.lua"))()
+    end
+})
+
+
+Tabs.Scripts:AddButton({
+    Title = "Dead Rails",
+    Description = "",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/aiminawp/temp/refs/heads/main/deadRails.lua"))()
+    end
+})
+
+
+Tabs.Scripts:AddButton({
+    Title = "GrowAGarden",
+    Description = "",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/aiminawp/acidHub/refs/heads/main/growAgarden.lua"))()
+    end
+})
+
+
+InterfaceManager:SetLibrary(Fluent)
+SaveManager:SetLibrary(Fluent)
+
+Window:SelectTab(1)
