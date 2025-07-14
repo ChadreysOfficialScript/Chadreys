@@ -25,14 +25,6 @@ Tabs.Scripts:AddButton({
 })
 
 Tabs.Scripts:AddButton({
-    Title = "Apocalypse Rising 2",
-    Description = "",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/ChadreysOfficialScript/Ch4dr3y.xyz/refs/heads/main/main.lua"))()
-    end
-})
-
-Tabs.Scripts:AddButton({
     Title = "Forsaken",
     Description = "",
     Callback = function()
